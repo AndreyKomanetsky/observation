@@ -3,14 +3,17 @@ config = require('config')
 const mongoose = require('mongoose')
 const path = require('path')
 
+console.log('point 1')
 const app = express()
-
+console.log('point 2')
 app.use(express.json({extended:true}))
-
+console.log('point 3')
 app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/link', require('./routes/link.routes'))
+console.log('point 4')
 
 if (process.env.NODE_ENV === 'production') {
+    console.log('point 5')
 
     app.use(express.static('client/build'))
 //    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
@@ -19,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 //        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 //    })
 }
+console.log('point 6')
 
 const port = process.env.PORT || 5000;
 
