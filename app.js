@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 console.log('point 6')
 
-const port = process.env.PORT || 5000;
+const port = server.listen(process.env.PORT || 5000);
 
 async function start(){
     try {
