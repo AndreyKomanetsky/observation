@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Camera observation",
   "main": "app.js",
+  "engine": {
+    "npm": "8.1.2",
+    "node": "16.13.1"
+  },
   "scripts": {
     "start": "cross-env node app.js", 
     "server": "nodemon app.js",
